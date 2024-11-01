@@ -221,7 +221,8 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
-  return points;
+ updateScore();
+	return points;
 }
 
 /**
@@ -229,10 +230,10 @@ function whack(event) {
 * Adds the 'click' event listeners to the moles. See the instructions
 * for an example on how to set event listeners using a for loop.
 */
-function setEventListeners(){
-  // TODO: Write your code here
-
-  return moles;
+function setEventListeners() {
+	// TODO: Write your code here
+	moles.forEach((moles) => moles.addEventListener("click", whack));
+	return moles;
 }
 
 /**
